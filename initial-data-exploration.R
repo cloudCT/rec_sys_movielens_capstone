@@ -643,7 +643,7 @@ edx %>% mutate(year = str_extract(title, "(\\(\\d{4}\\))")) %>%
 
 
 
-ggsave("movie_yrs_rating_count.png")
+ggsave("figs/movie_yrs_rating_count.png")
 
 ## Distribution of movie release years
 
