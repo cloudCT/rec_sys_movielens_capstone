@@ -78,7 +78,7 @@ edx_dat
 
 
 ## Test and train (Used for overall testing and to find final models lambda)
-
+set.seed(1, sample.kind = "Rounding")
 test_index <- createDataPartition(y = edx_dat$rating, times = 1, p = 0.1, list = FALSE)
 
 edx_train <- edx_dat[-test_index,]
@@ -96,7 +96,7 @@ rm(test_index, temp, removed)
 
 ## Test and train set to find proper testing lambda
 
-
+set.seed(1, sample.kind = "Rounding")
 test_index <- createDataPartition(y = edx_train$rating, times = 1, p = 0.1, list = FALSE)
 
 edx_train_l <- edx_train[-test_index,]
